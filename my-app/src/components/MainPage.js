@@ -16,6 +16,10 @@ export default function MainPage() {
       fluid
     >
       <Row className='text-center my-3 mx-2 p-1'>
+      {
+        // these columns will be replaced by some array mapping that returns product cards
+        // generated from data given by helper functions + backend
+      }
         <Col>
           <ProductCard
             title={"title"}
