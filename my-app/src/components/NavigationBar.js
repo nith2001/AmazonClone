@@ -23,11 +23,11 @@ export default function NavigationBar() {
       <Nav
         navbar
       >
-        <NavItem className='m-2'>
-          <Button>Profile</Button>
+        <NavItem>
+          <Button className='m-2 rounded-pill'>Profile</Button>
         </NavItem>
-        <NavItem className='m-2'>
-          <Button>My Orders</Button>
+        <NavItem>
+          <Button className='m-2 rounded-pill'>My Orders</Button>
         </NavItem>
       </Nav>
     </Navbar>

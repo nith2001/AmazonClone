@@ -14,12 +14,21 @@ function App() {
       <h1 className='text-center m-4'>Here are some products you might like!</h1>
       <Container
         className="bg-light border rounded"
+        fluid='lg'
       >
-        <Row className='text-center m-4'>
-          <Col>Hi</Col>
-          <Col>Hi</Col>
-          <Col>Hi</Col>
-          <Col>Hi</Col>
+        <Row className='text-center m-4 xl'>
+          <Col>
+
+          </Col>
+          <Col>
+
+          </Col>
+          <Col>
+
+          </Col>
+          <Col>
+
+          </Col>
         </Row>
       </Container>
     </>
