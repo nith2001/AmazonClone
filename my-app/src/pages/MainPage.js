@@ -4,7 +4,7 @@ import {
   Container,
   Row
 } from 'reactstrap';
-import ProductCard from './ProductCard';
+import ProductCard from '../components/ProductCard';
 
 const descriptionText = `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 eiusmod tempor incididunt ut labore et dolore...`
@@ -12,9 +12,10 @@ eiusmod tempor incididunt ut labore et dolore...`
 export default function MainPage() {
   return (
     <Container
-      className="rounded p-3"
+      className="p-3"
       fluid
     >
+      <h1 className='text-center m-4'>Here are some products you might like!</h1>
       <Row className='text-center my-3 mx-2 p-1'>
       {
         // these columns will be replaced by some array mapping that returns product cards
@@ -22,6 +23,7 @@ export default function MainPage() {
       }
         <Col>
           <ProductCard
+            id={"tv"}
             title={"title"}
             subtitle={"subtitle"}
             description={descriptionText}
@@ -29,6 +31,7 @@ export default function MainPage() {
         </Col>
         <Col>
           <ProductCard
+            id={"tv"}
             title={"title"}
             subtitle={"subtitle"}
             description={descriptionText}
@@ -36,6 +39,7 @@ export default function MainPage() {
         </Col>
         <Col>
           <ProductCard
+            id={"tv"}
             title={"title"}
             subtitle={"subtitle"}
             description={descriptionText}
@@ -43,6 +47,7 @@ export default function MainPage() {
         </Col>
         <Col>
           <ProductCard
+            id={"tv"}
             title={"title"}
             subtitle={"subtitle"}
             description={descriptionText}

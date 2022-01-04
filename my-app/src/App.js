@@ -1,17 +1,21 @@
-import React from 'react';
+import { React } from 'react';
 // import { } from 'reactstrap';
 import NavigationBar from './components/NavigationBar';
-import MainPage from './components/MainPage';
+import MainPage from './pages/MainPage';
 
 
-function App() {
+export default function App() {
+
+  function setSearch(searchQuery, categoryFilter) {
+    console.log(searchQuery);
+    console.log(categoryFilter);
+  }
+
   return (
     <>
-      <NavigationBar />
-      <h1 className='text-center m-4'>Here are some products you might like!</h1>
+      <NavigationBar handleSearch={setSearch}/>
       <MainPage />
     </>
   )
 }
 
-export default App;

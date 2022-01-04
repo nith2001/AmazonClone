@@ -8,7 +8,7 @@ import {
 } from 'reactstrap';
 import Searchbar from './Searchbar';
 
-export default function NavigationBar() {
+export default function NavigationBar({ handleSearch }) {
   return (
     <Navbar
       expand="md"
@@ -19,7 +19,7 @@ export default function NavigationBar() {
       <NavbarBrand href="/" className='m-2 ms-3'>
         FlowStore
       </NavbarBrand>
-      <Searchbar />
+      <Searchbar handleSearch={handleSearch}/>
       <Nav
         navbar
       >

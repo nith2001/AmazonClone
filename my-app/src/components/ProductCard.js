@@ -8,7 +8,7 @@ import {
   CardText
 } from 'reactstrap';
 
-export default function ProductCard({ title, subtitle, description }) {
+export default function ProductCard({ id, title, subtitle, description }) {
   return (
     <Card className="bg-light border border-dark rounded-3 m-4">
       <CardBody>

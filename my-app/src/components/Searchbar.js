@@ -1,11 +1,15 @@
-import React from 'react';
+import { React, useState } from 'react';
 import {
   InputGroup,
   Input,
   Button
 } from 'reactstrap';
 
-export default function Searchbar() {
+export default function Searchbar({ handleSearch }) {
+
+  const [category, setCategory] = useState("");
+  const [search, setSearch] = useState("");
+
   return (
     <>
       <InputGroup className='w-75 m-2'>
@@ -14,6 +18,7 @@ export default function Searchbar() {
             type='select'
             name='select'
             id='categories'
+            onChange={(e) => setCategory(e.target.value)}
           >
             <option>Categories</option>
             <option>1</option>
@@ -21,8 +26,11 @@ export default function Searchbar() {
             <option>3</option>
           </Input>
         </div>
-        <Input />
-        <Button className="bi bi-search"></Button>
+        <Input
+          onChange={(e) => setSearch(e.target.value)}
+          value={search}
+        />
+        <Button className="bi bi-search" onClick={() => handleSearch(search, category)}></Button>
       </InputGroup>
     </>
   )
