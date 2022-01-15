@@ -7,6 +7,7 @@ import {
   NavItem
 } from 'reactstrap';
 import Searchbar from './Searchbar';
+import { Link } from 'react-router-dom';
 
 export default function NavigationBar({ handleSearch }) {
   return (
@@ -24,10 +25,14 @@ export default function NavigationBar({ handleSearch }) {
         navbar
       >
         <NavItem>
-          <Button className='m-2 rounded-pill'>Profile</Button>
+          <Link to="/profile">
+            <Button className='m-2 rounded-pill'>Profile</Button>
+          </Link>
         </NavItem>
         <NavItem>
-          <Button className='m-2 rounded-pill'>My Orders</Button>
+          <Link to="/orders">
+            <Button className='m-2 rounded-pill'>My Orders</Button>
+          </Link>
         </NavItem>
       </Nav>
     </Navbar>

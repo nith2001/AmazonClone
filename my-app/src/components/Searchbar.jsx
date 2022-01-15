@@ -4,6 +4,7 @@ import {
   Input,
   Button
 } from 'reactstrap';
+import "./searchbar.css";
 
 export default function Searchbar({ handleSearch }) {
 
@@ -12,7 +13,7 @@ export default function Searchbar({ handleSearch }) {
 
   return (
     <>
-      <InputGroup className='w-75 m-2'>
+      <InputGroup id="input-group" className='w-75 m-2'>
         <div className='col-xs-2'>
           <Input
             type='select'
@@ -29,8 +30,14 @@ export default function Searchbar({ handleSearch }) {
         <Input
           onChange={(e) => setSearch(e.target.value)}
           value={search}
+          id="bar"
+          placeholder='Search here...'
         />
-        <Button className="bi bi-search" onClick={() => handleSearch(search, category)}></Button>
+        <Button
+          className="bi bi-search"
+          id="search-button"
+          onClick={() => handleSearch(search, category)}>
+        </Button>
       </InputGroup>
     </>
   )
