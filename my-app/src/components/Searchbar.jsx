@@ -1,15 +1,12 @@
-import { React, useState } from 'react';
 import {
   InputGroup,
   Input,
   Button
 } from 'reactstrap';
+import { Link } from 'react-router-dom';
 import "./searchbar.css";
 
-export default function Searchbar({ handleSearch }) {
-
-  const [category, setCategory] = useState("");
-  const [search, setSearch] = useState("");
+export default function Searchbar({ setSearch, setCategory }) {
 
   return (
     <>
@@ -22,22 +19,19 @@ export default function Searchbar({ handleSearch }) {
             onChange={(e) => setCategory(e.target.value)}
           >
             <option>Categories</option>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
+            <option>Tech</option>
+            <option>Shoes</option>
+            <option>Baby</option>
           </Input>
         </div>
         <Input
           onChange={(e) => setSearch(e.target.value)}
-          value={search}
           id="bar"
           placeholder='Search here...'
         />
-        <Button
-          className="bi bi-search"
-          id="search-button"
-          onClick={() => handleSearch(search, category)}>
-        </Button>
+        <Link to="/searchresults">
+          <Button className="bi bi-search" id="search-button"></Button>
+        </Link>
       </InputGroup>
     </>
   )

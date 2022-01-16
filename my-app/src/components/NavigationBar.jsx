@@ -9,7 +9,7 @@ import {
 import Searchbar from './Searchbar';
 import { Link } from 'react-router-dom';
 
-export default function NavigationBar({ handleSearch }) {
+export default function NavigationBar({ setSearch, setCategory }) {
   return (
     <Navbar
       expand="md"
@@ -20,7 +20,7 @@ export default function NavigationBar({ handleSearch }) {
       <NavbarBrand href="/" className='m-2 ms-3'>
         FlowStore
       </NavbarBrand>
-      <Searchbar handleSearch={handleSearch}/>
+      <Searchbar setSearch={setSearch} setCategory={setCategory} />
       <Nav
         navbar
       >

@@ -1,4 +1,4 @@
-import { React } from 'react';
+import { React, useState } from 'react';
 // import { } from 'reactstrap';
 import NavigationBar from './components/NavigationBar';
 import MainPage from './pages/MainPage';
@@ -9,29 +9,25 @@ import {
 } from "react-router-dom";
 import OrdersPage from "./pages/OrdersPage";
 import ProfilePage from "./pages/ProfilePage";
+import SearchPage from "./pages/SearchPage";
 
 export default function App() {
 
-  function setSearch(searchQuery, categoryFilter) {
-    console.log(searchQuery);
-    console.log(categoryFilter);
-  }
+  const [category, setCategory] = useState("");
+  const [search, setSearch] = useState("");
 
   return (
     <>
-      <NavigationBar handleSearch={setSearch}/>
+      <NavigationBar setSearch={setSearch} setCategory={setCategory} />
       <Routes>
         <Route path="/" element={ <MainPage /> } />
-        <Route path="/orders" element= { <OrdersPage /> }/>
-        <Route path="/profile" element= { <ProfilePage /> }/>
+        <Route path="/orders" element={ <OrdersPage /> }/>
+        <Route path="/profile" element={ <ProfilePage /> }/>
         <Route
-          path="*"
-          element={
-            <main style={{ padding: "1rem" }}>
-              <p>There's nothing here!</p>
-            </main>
-          }
+          path="/searchresults"
+          element={ <SearchPage search={search} category={category}/> }
         />
+        <Route path="*" element={ <h1>There's nothing here!</h1> } />
       </Routes>
       <Outlet />
     </>
