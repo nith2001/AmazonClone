@@ -17,7 +17,7 @@ export default function NavigationBar({ setSearch, setCategory }) {
       className='bg-light border'
       container="fluid"
     >
-      <NavbarBrand href="/" className='m-2 ms-3'>
+      <NavbarBrand href="/" className='my-3 mx-2'>
         FlowStore
       </NavbarBrand>
       <Searchbar setSearch={setSearch} setCategory={setCategory} />

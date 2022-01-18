@@ -10,7 +10,7 @@ export default function Searchbar({ setSearch, setCategory }) {
 
   return (
     <>
-      <InputGroup id="input-group" className='w-75 m-2'>
+      <InputGroup id="input-group" className='w-75 m-1'>
         <div className='col-xs-2'>
           <Input
             type='select'

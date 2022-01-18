@@ -1,0 +1,5 @@
+#filter-box {
+  position: sticky;
+  top: 50px;
+  border: 1px solid gray;
+}

@@ -6,6 +6,7 @@ import {
 } from 'reactstrap';
 import ProductCard from '../components/ProductCard';
 
+// this is temporary
 const descriptionText = `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 eiusmod tempor incididunt ut labore et dolore...`
 
