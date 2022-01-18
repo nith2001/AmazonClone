@@ -15,13 +15,6 @@ export default function SearchPage({ search, category }) {
 
   // fetch search results from the search and category passed in using useEffect.
 
-  const [open, setOpen] = useState('1');
-
-  const toggle = (id) => {
-    open === id ? setOpen() : setOpen(id);
-    console.log(open);
-  };
-
   return (
     <Container
       className="p-3"
