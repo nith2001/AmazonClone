@@ -11,9 +11,22 @@ import './searchpage.css';
 const descriptionText = `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 eiusmod tempor incididunt ut labore et dolore...`
 
+
 export default function SearchPage({ search, category }) {
 
   // fetch search results from the search and category passed in using useEffect.
+  // building temp metadata
+  const cards = [];
+  for (let i = 0; i < 3; i++) {
+    cards.push(
+      <ProductCard
+        id={"tv"}
+        title={"title"}
+        subtitle={"subtitle"}
+        description={descriptionText}
+      />
+    );
+  }
 
   return (
     <Container
@@ -21,7 +34,7 @@ export default function SearchPage({ search, category }) {
       fluid
     >
       <h1 className='text-center m-1'>Search Results</h1>
-      <hr />
+      <hr className="mx-3"/>
       <Row className='text-center my-3 mx-2 p-1'>
         {
           // these columns will be replaced by some array mapping that returns product cards
@@ -49,64 +62,13 @@ export default function SearchPage({ search, category }) {
           </Accordion>
         </Col>
         <Col>
-          <ProductCard
-            id={"tv"}
-            title={"title"}
-            subtitle={"subtitle"}
-            description={descriptionText}
-          />
-          <ProductCard
-            id={"tv"}
-            title={"title"}
-            subtitle={"subtitle"}
-            description={descriptionText}
-          />
-          <ProductCard
-            id={"tv"}
-            title={"title"}
-            subtitle={"subtitle"}
-            description={descriptionText}
-          />
+          {cards.map((card) => { return (card) })}
         </Col>
         <Col>
-          <ProductCard
-            id={"tv"}
-            title={"title"}
-            subtitle={"subtitle"}
-            description={descriptionText}
-          />
-          <ProductCard
-            id={"tv"}
-            title={"title"}
-            subtitle={"subtitle"}
-            description={descriptionText}
-          />
-          <ProductCard
-            id={"tv"}
-            title={"title"}
-            subtitle={"subtitle"}
-            description={descriptionText}
-          />
+          {cards.map((card) => { return (card) })}
         </Col>
         <Col>
-          <ProductCard
-            id={"tv"}
-            title={"title"}
-            subtitle={"subtitle"}
-            description={descriptionText}
-          />
-          <ProductCard
-            id={"tv"}
-            title={"title"}
-            subtitle={"subtitle"}
-            description={descriptionText}
-          />
-          <ProductCard
-            id={"tv"}
-            title={"title"}
-            subtitle={"subtitle"}
-            description={descriptionText}
-          />
+          {cards.map((card) => { return (card) })}
         </Col>
       </Row>
     </Container>

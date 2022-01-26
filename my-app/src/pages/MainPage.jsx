@@ -17,6 +17,7 @@ export default function MainPage() {
       fluid
     >
       <h1 className='text-center m-4'>Here are some products you might like!</h1>
+      <hr className="mx-3"/>
       <Row className='text-center my-3 mx-2 p-1'>
       {
         // these columns will be replaced by some array mapping that returns product cards
